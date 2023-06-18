@@ -7,11 +7,9 @@ import 'package:hera_ui_in_getx/Hera_sign_up_page/hera_signUp_page.dart';
 
 class HeraLoginPage extends GetView<FunctionsController> {
   const HeraLoginPage({super.key});
-  
 
   @override
   Widget build(BuildContext context) {
-    
     var height = Get.height;
     var width = Get.width;
 
@@ -26,15 +24,14 @@ class HeraLoginPage extends GetView<FunctionsController> {
               fit: BoxFit.cover,
             ),
           ),
-          SingleChildScrollView(
-            child: Center(
-              child: Padding(
-                padding: const EdgeInsets.only(top: 100, bottom: 25),
-                child: Container(
-                  height: height * 0.8,
-                  width: width * 0.9,
-                  decoration: BoxDecoration(
-                     gradient: const LinearGradient(
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 100, bottom: 25),
+              child: Container(
+                height: height * 0.8,
+                width: width * 0.9,
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
@@ -42,11 +39,12 @@ class HeraLoginPage extends GetView<FunctionsController> {
                       Color.fromARGB(108, 149, 88, 19)
                     ],
                   ),
-                    borderRadius: BorderRadius.circular(100),
-                    //color: const Color.fromARGB(135, 0, 0, 0),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16),
+                  borderRadius: BorderRadius.circular(100),
+                  //color: const Color.fromARGB(135, 0, 0, 0),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: SingleChildScrollView(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -105,7 +103,7 @@ class HeraLoginPage extends GetView<FunctionsController> {
                                 ),
                                 border: InputBorder.none,
                                 hintText: 'Email',
-
+                  
                                 filled: true,
                                 fillColor: Colors.white,
                                 contentPadding: EdgeInsets.only(
